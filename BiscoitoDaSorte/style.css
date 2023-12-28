@@ -1,0 +1,132 @@
+:root {
+  font-size: 62.5%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.479);
+  padding: 6.4rem;
+
+  width: min(50rem, 90%);
+
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  font-size: 3.4rem;
+  margin-bottom: 3.2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+  font-weight: 400;
+}
+
+#coockie {
+  cursor: pointer;
+}
+
+#shakeImage:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.result {
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  border-radius: 0.4rem;
+  padding: 1.2rem;
+}
+
+.result > p {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  font-family: "Dancing Script", cursive;
+}
+
+button {
+  border-radius: 4px;
+  background: #ff9500;
+  width: 15rem;
+  height: 4rem;
+  border: none;
+
+  color: #fff;
+  font-size: 1.6rem;
+
+  cursor: pointer;
+}
